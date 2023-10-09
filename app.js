@@ -34,6 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     loginForm.addEventListener("submit", e => {
         e.preventDefault();
+         const loginSuccessful = true; // Change this based on your logic
+
+    if (loginSuccessful) {
+        window.location.href = "https://alirazaramejo.github.io/post/"; // Redirect to the next page
+    } else {
+        setFormMessage(loginForm, "error", "Invalid username/password combination");
+    }
 
         // Perform your AJAX/Fetch login
 
